@@ -1,11 +1,5 @@
-#!name=Task - All in one By nzw9314
-#!desc=该模块适用于定时签到:集成全部: NobyDa、Chavy以及个人收集常用签到脚本。建议本地安装以便自定义修改签到时间。
-#!system=ios
+#!name=签到模块
 
-# Task配置 By nzw9314
-# GitHub主页(https://github.com/nzw9314)
-# TG通知频道 (https://t.me/nzw9314News)
-# 定时脚本
 
 [Script]
 
