@@ -1,247 +1,283 @@
-#!name=签到模块
-
+#!name=Tartarus iOS Tasks Module
+#!desc=iOS Tasks 模块配置
 
 [Script]
+# By Evilbutcher GitHub：https://github.com/evilbutcher/Quantumult_X/tree/master
+cron "0 6 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/nasa/nasapic.js, tag=NASA每日一图
+cron "0 6 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/idaily/idaily.js, tag=iDaily每日环球视野
+cron "30 7-22 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/appstore/AppMonitor.js, tag=App价格监控
+cron "30 0 8-22/2 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hotsearch/hot.js, tag=热门监控
+cron "45 3 8 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.js, tag=微博超话
+cron "25 4 8 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/glados.js, tag=GLaDOS签到
+cron "45 4 8 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js, tag=机场签到
+cron "0 5 8 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js, tag=机场签到Cookie版
+cron "0 4 8 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/funboat/funboat.js, tag=Funboat签到
 
-# > 英雄联盟排名 (By @syzzzf)
-lol.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/lol.js,script-update-interval=0
-# > 一言
-Calendar.js = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Meeta/Surge/Scripting/Calendar.js,tag=一言+历史上的今天,type=cron,cronexp=0 0 8 * * *
-# > 每日一句+ 蚂蚁森林收能量
-cron_daily.js = script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/yichahucha/cron_daily.js,tag=每日一句+蚂蚁森林收能量,type=cron,cronexp=0 0 8 * * *
-# 签到脚本
-# > NobyDa
-# > 京东
-JD_DailyBonus.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
-# > 爱奇艺
-iQIYI_DailyBonus.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/iQIYI-DailyBonus/iQIYI_DailyBonus.js,script-update-interval=0
-# > 吾爱破解
-52pojie.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/52pojieDailyBonus/52pojie.js,script-update-interval=0
-# > 哔哩哔哩漫画
-Manga.js = type=cron,cronexp=0 0 8 * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js,script-update-interval=0
-# @chavyleung
-# 电信营业厅
-# 打开 APP 手动签到一次: 访问下右下角 `我` > `签到` (头像下面)
-10000.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
-# AcFun
-# 打开 APP, 访问下`我的`
-acfun.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js,script-update-interval=0
-# APK.TW
-# 打开浏览器访问: https://apk.tw `(先登录! 把页面切换为电脑版)`
-apktw.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js,script-update-interval=0
-# bilibili
-# 打开浏览器访问: https://www.bilibili.com 或 https://live.bilibili.com
-bilibili.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0
-# 如需银瓜子转硬币，取消下方注释
-bilibili.silver2coin.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,script-update-interval=0
-# 懂球帝
-# 打开懂球帝 (打开前先杀掉 APP)
-dongqiudi.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dongqiudi/dongqiudi.js,script-update-interval=0
-# 威锋网
-# 打开浏览器访问: https://www.feng.com`(先登录! 把页面切换为电脑版)`
-feng.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.js,script-update-interval=0
-# 飞客茶馆
-# 打开 APP, 访问下`个人中心`
-flyertea.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,script-update-interval=0
-# 网易云音乐
-# 浏览器访问并登录: https://music.163.com/m/login
-neteasemusic.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/quanx/neteasemusic.js,script-update-interval=0
-# 网易新闻
-# 打开 APP 然后手动签到 1 次
-neteasenews.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,script-update-interval=0
-# 去哪儿
-# 打开 APP 然后手动签到 1 次
-qunar.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.js,script-update-interval=0
-# 人人视频
-# 打开 APP, 访问下`个人中心`
-rrtv.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,script-update-interval=0
-# 顺丰速运
-# 打开 APP, 访问下`我的顺丰` > `去签到` (访问下`去签到`的页面即可, 不用点`签到`)
-# 打开 APP或小程序, 访问下`27周年庆`
-sfexpress.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0
-# 什么值得买
-# 浏览器访问并登录: https://zhiyou.smzdm.com/user/login
-smzdm.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/quanx/smzdm.js,script-update-interval=0
-# 百度签到
-# 先登录,浏览器访问一下: https://tieba.baidu.com 或者 https://tieba.baidu.com/index/
-tieba.js = type=cron,cronexp="0 0 8 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,script-update-interval=0
-# V2EX
-# 浏览器打开https://www.v2ex.com/mission/daily ，待弹出获取成功即可
-v2ex.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/quanx/v2ex.js,script-update-interval=0
-# 腾讯视频
-# 1.手机浏览器访问并登录: https://film.qq.com/
-videoqq.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0
-# 喜马拉雅
-# 打开 APP, 访问下右下角`账号`
-ximalaya.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,script-update-interval=0
-# 网易严选
-# 打开 APP, 访问下`个人`>`每日签到`(右上角)
-yanxuan.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/yanxuan/yanxuan.js,script-update-interval=0
-# 字幕组
-# 网页:打开浏览器访问: http://www.rrys2019.com, App: 打开 APP 即可
-zimuzu.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js,script-update-interval=0
-# QQ音乐
-# 打开 APP 然后手动签到 1 次
-qqmusic.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js,script-update-interval=0
-# CSDN
-# 打开 APP , 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次, 系统提示: `获取Cookie: 成功`
-csdn.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.js,script-update-interval=0
-# 加油广东
-# 打开 APP 然后手动签到 1 次
-gdoil.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js,script-update-interval=0
-# 芒果TV
-# 打开 APP 然后手动签到 1 次
-mgtv.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.js,script-update-interval=0
-# 米游社
-# 打开 APP
-mihoyo.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mihoyo/mihoyo.js,script-update-interval=0
-# 中国联通
-# 1打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
-# 2首页>天天抽奖, 系统提示 `2` 次: `获取Cookie: 成功 (登录抽奖)` 和 `获取Cookie: 成功 (抽奖次数)`
-10010.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0
-# 猫咪音乐
-# 打开 网站 `https://www.maomicd.com` 然后手动签到 1 次
-maomicd.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/maomicd/maomicd.js,script-update-interval=0
-# 中国移动
-# 打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
-10086.js = type=cron,cronexp=0 0 8 * * *,script-path=ttps://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js
-# 美团外卖
-# 打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
-wmmeituan.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.js,script-update-interval=0
-# 美团
-# 打开 APP , 然后手动签到 1 次, (`首页` > `红包签到`)
-meituan.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
-# 时光相册
-# 打开 APP 然后手动签到 1 次
-everphoto.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.js,script-update-interval=0
-# 百词斩
-# 打开 APP 手动签到一次: 访问下右下角 `我` > `我的铜板` > `加入百词斩小班` > `去查看` > `我的小班进去 领铜板`
-bcz.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bcz/bcz.js,type=cron,cronexp=0 0 8 * * *
-# 叮咚买菜
-# 打开 APP, 访问下`我的`>`积分`
-mcdd.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.js,script-update-interval=0
-# 分期乐
-# 打开 APP 手动签到一次: 访问下右下角 `我的` > `乐星` > `签到`
-# `我的` > `账单点击` > `超级乐星日/天天领乐星`
-fenqile.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fenqile/fenqile.js,script-update-interval=0
-# 樊登读书
-# 打开 APP 手动签到一次: 访问下右下角 `我的` > `签到`
-fandeng.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.js,script-update-interval=0
-# 全民K歌
-# 打开 APP 手动签到一次: 访问下右下角 `我的` > `任务中心` > `签到`
-qmkg.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qmkg/qmkg.js,script-update-interval=0
-# 合创
-# 打开 APP 然后手动签到 1 次
-hycan.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hycan/hycan.js,script-update-interval=0
-# 蔚来
-# 打开 APP 手动签到一次
-nio.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/nio/nio.js,script-update-interval=0
-# 海底捞
-# 打开APP 然后手动签到 1 次
-hdl.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/haidilao/hdl.js,script-update-interval=0
-# 网易考拉
-# 打开 APP 手动签到一次: 访问下右下角 `我的考拉` > `领考拉豆` > `签到`
-wykl.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wykl/wykl.js,script-update-interval=0
-# WPS
-# 打开 APP 我 > 签到 (右上角, 不用手动签到)
-# 打开 `我的WPS会员` 小程序 (手动签到)
-wps.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js,script-update-interval=0
-# 七猫小说
-# APP内手动日常签到(观看小视频领取奖励)和新手领福利签到以及幸运大转盘 1 次
-qmnovel.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qimao/qmnovel.js,script-update-interval=0
-# 智行火车
-# 打开 APP 手动签到一次: 访问下右下角 `个人中心` > `签到`
-zxhc.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.js,script-update-interval=0
-# 苏宁易购
-# 首页 > 签到有礼
-# 首页 > 领取红包
-# 首页  > 天天低价
-suning.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js,script-update-interval=0
-# Zaker
-# 打开App,然后手动签1次
-zaker.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js,script-update-interval=0
-# 不背单词
-# 打开App,然后手动签1次
-bubei.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js,script-update-interval=0
-# 豆瓣时间
-# 打开 APP 手动签到一次:  `市集` > `豆瓣时间` > `签到`
-dbsj.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dbsj/dbsj.js,script-update-interval=0
-# 哈啰出行
-# 打开 APP 进入签到页面:  `我的` > `有哈有车`
-hellobike.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js,script-update-interval=0
-# 掌上飞车
-# 打开 APP[掌上飞车],然后手动签到 1 次
-zsfc.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zsfc/zsfc.js,script-update-interval=0
-# 趣头条
-# 打开 APP 进入签到:  `右上角` > `签到`
-# 阅读篇数获取Cookie:`小视频`中播放一段时间视频即可获取,具体的阅读篇数奖励请到应用内手动点击
-# 首页金币奖励:此Cookie在首页的推荐中随机出现,随机获取,并不一定会出现。
-qtt.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,script-update-interval=0
-# > 其他
-# 微博超话 (By @NavePnow)
-# 需要填超话id
-# 打开超话网页(切换到电脑版)，例如 https://weibo.com/p/1008080c5fb650788fe5c7577f0b6ec4a34038，点击 签到/已签到 按钮
-weibo = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/NavePnow/Scripts/weibo/checkin.js,script-update-interval=0
-# 饿了么   (By @syzzzf)
-# 打开 APP, 访问下`我的`>`签到领红包`(左上角)
-elemSign.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,script-update-interval=0
-# 英雄联盟排名 (By @syzzzf)
-lol.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/lol.js,script-update-interval=0
-# TestFlight公测监控 (By @syzzzf)
-# 需要自己填appkey
-testflight.js = type=cron,cronexp=0 0 * * * *,script-path=nzw9314/Script/testflight.js
-# 斗鱼鱼吧 By @yyfyyf123
-yubaSign.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/yubaSign.js,script-update-interval=0
-# 携程旅行  (By @barrymchen)
-# 打开App 点击”我的“,然后点击”我的积分“,再点击下面的”签到.任务“即可
-ctrip.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/ctrip.js,script-update-interval=0
-# 腾讯新闻 (By 红鲤鱼与绿鲤鱼与驴)
-# 登录app 签到
-Tengxunnews.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/Tengxunnews.js,script-update-interval=0
-# 楼兰小说论坛 (By @iNotification)
-# 网页登录 www.lltxt.com 点击 ”我的信息 - 签到 - 开始签到“
-loulancheck.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/loulancheck.js,script-update-interval=0
-# 招行信用卡(公众号) (By @iNotification)
-# 招商银行信用卡微信公众号：”领cron “0 0 8 * * *” script-path
-cmbchina.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/cmbchina.js,script-update-interval=0
-# 京东成长分 (By @barrymchen)
-# 打开京东金融app，“信用”-》“小白成长分”
-jdczf.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jdczf.js,script-update-interval=0
-# 工银e生活 (By @barrymchen)
-# App首页“欢趣签到”,手动签到1次
-icbc_sign.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/icbc_sign.js,script-update-interval=0
-# 微信小程序-同程艺龙 (By @barrymchen)
-tongc_sign.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/tongc_sign.js,script-update-interval=0
-tongc_info.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/tongc_info.js,script-update-interval=0
-# 京东到家 (@barrymchen, @GideonSenku & @Macsuny)
-# APP登陆账号后，点击主页’签到‘,即可
-jddj.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jddj.js,script-update-interval=0
-# 微信小程序-来客有礼 (By @Macsuny)
-# 微信搜索’来客有礼‘小程序,登陆京东账号，点击’领京豆->翻牌‘
-lkyl.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/lkyl.js,script-update-interval=0
-# 电视家 (By @Macsuny)
-# APP登陆账号后，点击底部’赚赚‘进入签到页面,即可获取Cookie.
-dianshijia.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/dianshijia.js,script-update-interval=0
-# 电视节目预告 (By @Macsuny)
-# var c = “cctv1”
-# 常用卫视代码北京: btv1 | 湖南: hunan | 浙江: zhejiang|河南: henan| 江苏: jiangsu|广东: guangdong
-tvpreview.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/tvpreview.js,script-update-interval=0
-# 快手极速版 (By @Macsuny)
-# APP登陆账号后，点击’钱包‘
-kuaishou.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/kuaishou.js,script-update-interval=0
-# 360扫地机 (By @qiaoborui)
-# 首页右上角-签到🎁
-360.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/360.js,script-update-interval=0
+# By zZPigle   GitHub：https://github.com/zZPiglet/Task/tree/master
+cron "0 * * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js,tag=微博通知
+cron "0 9 8 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemCheckIn.js, tag=饿了么-打卡领红包
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/115/115.js, tag=115
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js, tag=奈雪
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/ZMTeacher/ZMTeacher.js, tag=掌门好老师
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Blibee/Blibee.js, tag=便利蜂
+cron "0 0 10,21 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean.js, tag=欧可林
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean_mini.js, tag=欧可林商城
+cron "0 * * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/heybox/heybox.js, tag=小黑盒
+cron "0 18 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/MovieCalendar/MovieCalendar.js, tag=豆瓣电影日历
+cron "0 25 7 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Alipay/Alipay.js, tag=Alipay
+cron "7 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/umetrip/umetrip.js, tag=航旅纵横
+cron "0 1,20 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js, tag=滴滴出行
 
-# 喜马拉雅极速版
-# APP登陆账号后，点击右下角’福利’选项,即可获取Cookie.
-# 每隔一小时开启一次，每天最多5次，金币账户与标准版不同账户
-xmspeed.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/xmspeed.js
+# By lxk0301   GitHub：https://github.com/lxk0301/scripts
+cron "5 6-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js,timeout=30,  tag=东东农场
+cron "10 7-19/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js,timeout=30, tag=东东萌宠
+cron "1 7-21/2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js,timeout=30, tag=京东种豆得豆
+cron "15 */2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js,timeout=30, tag=宠汪汪
+cron "12 */1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js,timeout=30, tag=宠汪汪喂食
+cron "0 0,6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js,timeout=30, tag=宠汪汪偷好友积分与狗粮
+cron "1 0,8,12,16 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js,timeout=30, tag=宠汪汪积分兑换奖品
+cron "8 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js,timeout=30, tag=京东天天加速
+cron "3 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js,timeout=30, tag=京东摇钱树
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js,tag=摇京豆
+cron "11 1-23/5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js,timeout=30, tag=京小超
+cron "20 5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js,timeout=30, tag=京小超领蓝币(兑换京豆)
+cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js,timeout=30, tag=取关京东店铺商品
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js,timeout=30, tag=进店领豆
+#cron "1 0-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_818.js, timeout=30, tag=京东手机狂欢城
+cron "15 10 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_run.js, timeout=30, tag=宠汪汪邀请助力与赛跑助力
+cron "15 14 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_daily_egg.js, tag=天天提鹅
+cron "12 13 * * *" script-path= https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js, tag=金融养猪
+cron "1 1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js, tag=京东全民开红包
+cron "0 19 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_baiTiao.js, tag=京东白条
+#cron "1 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_xtg.js, tag=星推
+#cron "20 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_collectProduceScore.js, tag=京东全民营业领金币
+cron "2 9 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js, tag=京豆变动通知
+京东点点券 = type=cron,cronexp="10 0,20 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js
 
-# 微信小程序-活动抽奖 (By @makexp & @zZPiglet)
-#打开微信小程序 进入“活动抽奖”，手动签到一次或点击“已签到”
-WeChatLottery_new.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js
+# By NobyDa    GitHub：https://github.com/NobyDa/Script/tree/master
+cron "15 0 * * *" ,timeout=30, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,timeout=30, tag=东东
+cron "20 0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,tag=爱奇艺
+cron "30 0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js,tag=吾爱破解
+cron "40 0 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js,tag=哔哩哔哩漫画
+cron "0 0,1,2 8 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js,tag=百度贴吧(客户端)
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js, tag=快看漫画
 
-# 微信小程序-喜马拉雅 (By @makexp)
-# 微信小程序 - 喜马拉雅 - 我的： 签到 “ 获取 Cookie
-WeChatLottery_new.js = type=cron,cronexp=0 0 8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/xmly_wc.js
+# By chavyleung      GitHub：https://github.com/chavyleung/scripts
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/jd/JD_BaiTiao.js, tag=京东白条
+cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,tag=百度签到(网页)
+cron "50 0 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,tag=电信营业厅
+cron "0 1 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/acfun/acfun.js,tag=AcFun
+cron "10 1 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/apktw/apktw.js,tag=APK.TW
+cron "20 1 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,tag=哔哩哔哩
+cron "30 1 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js,tag=哔哩哔哩
+cron "40 1 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dongqiudi/dongqiudi.js,tag=懂球帝
+cron "50 1 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.js,tag=威锋网
+cron "0 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,tag=飞客茶馆
+cron "10 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,tag=网易云音乐
+cron "30 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.js,tag=网易新闻
+cron "40 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qunar/qunar.js,tag=去哪儿
+cron "50 2 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,tag=人人视频
+cron "0 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,tag= 顺丰速运
+cron "10 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js,tag=什么值得买
+cron "20 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/v2ex/v2ex.js,tag=V2EX
+cron "30 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,tag=腾讯视频
+cron "40 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.js,tag=喜马拉雅
+cron "50 3 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/yanxuan/yanxuan.js,tag=网易严选
+cron "0 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.js,tag=字幕组
+cron "10 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js,tag=QQ音乐
+cron "20 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/csdn/csdn.js,tag=CSDN
+cron "30 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/gdoil/gdoil.js,tag=加油广东
+cron "40 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.js,tag=芒果TV
+cron "50 4 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mihoyo/mihoyo.js,tag=米游社
+cron "0 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,tag=中国联通
+cron "10 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/maomicd/maomicd.js,tag=猫咪音乐
+cron "20 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.js,tag=中国移动
+cron "30 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wmmeituan/wmmeituan.js,tag= 美团外卖
+cron "40 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,tag=美团
+cron "50 5 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/everphoto/everphoto.js,tag=时光相册
+cron "0 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bcz/bcz.js,tag=百词斩
+cron "10 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mcdd/mcdd.js,tag=叮咚买菜
+cron "20 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fenqile/fenqile.js,tag=分期乐
+cron "30 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.js,tag=樊登读书
+cron "40 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qmkg/qmkg.js,tag=全民K歌
+cron "50 6 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hycan/hycan.js,tag=合创
+cron "0 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/nio/nio.js,tag=蔚来
+cron "10 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/haidilao/hdl.js,tag=海底捞
+cron "20 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wykl/wykl.js,tag=网易考拉
+cron "30 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.js,tag=WPS
+cron "40 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qimao/qmnovel.js,tag=七猫小说
+cron "50 7 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zxhc/zxhc.js,tag=智行火车
+cron "0 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js,tag=苏宁易购
+cron "10 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zaker/zaker.js,tag=Zaker
+cron "20 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js,tag=不背单词
+cron "30 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/dbsj/dbsj.js,tag=豆瓣时间
+cron "40 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/hellobike/hellobike.js,tag=哈啰出行
+cron "50 8 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zsfc/zsfc.js,tag=掌上飞车
+cron "0 0 * * * *" script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,tag=趣头条
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduSign.js,tag=米读签到
+cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduRead.js,tag=米读阅读
+cron "0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.js,tag=多看
+cron "3 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/noteyoudao/noteyoudao.js, tag=有道云笔记
+cron "0 12 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js, tag=切换会话
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10086/10086.fee.js, tag=中国移动-查话费
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.js, tag=万达电影
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/pagoda/pagoda.js, tag=百果园
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js, tag=IT之家
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/nfzm/nfzm.js, tag=南方周末
+
+# Peng-YM  https://github.com/Peng-YM/QuanX/tree/master/Tasks
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js,tag=疫情日报
+cron "8 0 * * *"  script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/zongheng.js, tag=纵横小说
+cron "8 0 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/github.js, tag=GitHub
+cron "8 0 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/steam.js, tag=Steam价格监控
+cron "8 0 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/exchange.js, tag=汇率监控
+cron "0 9 1 * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/psn.js, tag=PSN会免
+cron "55 23 ? * THU" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/epic.js, tag=EPIC
+cron "30 8-22 * * *" script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js, tag=彩云天气
+
+# Sunert https://github.com/Sunert/Scripts/tree/master/Task
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/tvpreview.js, tag=节目预告
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/trainquery.js, tag=12306
+cron "4 0 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/exchangeRate.js, tag=实时货币换算
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/telecomInfinity.js, tag=中国电信套餐
+cron "30 9 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js, tag=腾讯新闻
+cron "30 10 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jddj.js, tag=京东到家
+cron "40 10 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js, tag=来客有礼
+cron "0 0 7,22 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/dianshijia.js, tag=电视家
+cron "0 11 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js, tag=快手极速版
+cron "0 11 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js, tag=微博&钱包
+cron "10 11 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/sinanews.js, tag=新浪新闻
+cron "20 11 8 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js, tag=中青看点极速版
+cron "4 0 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/mydigit.js, tag=数码之家
+cron "7 0 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js, tag=京喜
+
+# iepngs https://raw.githubusercontent.com/iepngs/Script/master
+cron "1 8,12,17 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/dingdong/index.js, tag=叮咚农场
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/lxhealth/manual.js, tag=lxhealth
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/studygolang/index.js, tag=go 语言中文网
+cron "29 8 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/ctrip/index.js,tag=携程旅行
+cron "5,35 8-21 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/jrtt/index.js,tag=今日头条极速版
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/lxsj/index.js,tag=旅行世界购物版
+
+# lowking   https://github.com/lowking/Scripts
+cron "0 0 0,1 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/bilibili/bangumiMonitor.js, tag=哔哩哔哩番剧监控
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/QQVip/qqVipCheckIn.js, tag=qq会员成长值
+cron "0 0 0 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/sony/sonyClub.js, tag=索尼俱乐部签到
+cron "0 0 0,1 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/douyu/yubaSign.js, tag=斗鱼鱼吧签到
+cron "0 0 0,2 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/QQPet/lkQQPet.js, tag=QQ萌宠
+
+# toulanboy  https://github.com/toulanboy/scripts
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/jd_price_detect/jd_price_detect.js, tag=京东价格提醒
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.js, timeout=600, tag=微博超话
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/muchong/muchong.js, timeout=600, tag=小木虫论坛
+
+# dompling   https://github.com/dompling/Script
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/cuuc/cuuc.js, tag=CU 云加速
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/oneSay/oneSay.js, tag=每日一言
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/historyToday/index.js, tag=历史上的今天,
+cron "3 0 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/birthdayCountDown/index.js, tag=生日倒计时
+cron "0 0 0,2 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/xiaomiyp/xiaomiyp.js, tag=小米有品
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/ymatou/ymatou.js, tag=ymatou
+
+# songyangzz   https://github.com/songyangzz/QuantumultX
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/lol.js,tag=英雄联盟排名
+cron "0 0 * * * *" script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/testflight.js,tag=TestFlight公测监控
+cron "0 9 8 * * *" script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,tag=饿了么
+cron "10 9 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/yubaSign.js,tag=斗鱼鱼吧
+
+# barrym-chen   https://github.com/barrym-chen/Script
+cron "20 9 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip.js, tag=携程旅行
+cron "20 9 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip_wx/ct_sign.js, tag=携程小程序
+cron "20 9 8 * * *" https://raw.githubusercontent.com/barrym-chen/Script/master/elong/elong_draw.js, tag=艺龙酒店
+cron "0 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/jdczf/jdczf.js, tag= 京东成长分
+cron "10 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_sign.js, tag=工银e生活
+cron "20 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_sign.js, tag=微信小程序-同程艺龙
+cron "20 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_info.js, tag=微信小程序-同程艺龙info
+cron "10 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/fcz/fcz_sign.js, tag=飞常准
+cron "10 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/jddj/jddj.js, tag=京东到家
+cron "10 10 8 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tie/tie_sign.js, tag=京东金融提额
+
+# congcong0806   https://github.com/congcong0806/surge-list/tree/master
+cron "0 8 * * *" script-path=https://github.com/congcong0806/surge-list/raw/master/Script/daysmatter.js, tag=倒数日
+cron "0 7-23 * * *" script-path=https://github.com/congcong0806/surge-list/raw/master/Script/time.js, tag=今日时间
+
+# MeetaGit    https://github.com/MeetaGit/MeetaRules/tree/master/Surge
+cron "0 0/5 13-23 * * *" script-path=https://raw.githubusercontent.com/MeetaGit/MeetaRules/m%CE%B1ster/Surge/Custom_Js/lottery_xyft.js, tag=幸运飞艇
+
+# yichahucha    https://github.com/yichahucha/surge/tree/master
+cron "11 7 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/yichahucha/cron_daily.js, tag=每日一句+蚂蚁森林收能量
+
+# iNotification   
+cron "40 9 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/loulancheck.js, tag=楼兰小说
+cron "50 9 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/cmbchina.js, tag=招行信用卡
+
+# qiaoborui    https://github.com/qiaoborui
+cron "10 11 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/360.js, tag=360扫地机
+
+# Dachaw  
+cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/nCoVrumors.js,tag=疫情辟谣
+
+# makexp
+cron "40 11 8 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/xmly_wc.js,tag=微信小程序-喜马拉雅
+
+# vinewx  https://ooxx.be/js/
+cron "0 9 * * *" script-path=https://ooxx.be/js/jegotrip.js, tag=无忧行
+cron "0 9 * * *" script-path=https://ooxx.be/js/umer.js, tag=优卖医生
+cron "0 18 * * *" script-path=https://ooxx.be/js/maoyan.js, tag=猫眼
+
+#  chouchoui  https://github.com/chouchoui/QuanX/tree/master/Scripts
+cron "30 8,13,19 * * *" script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/angelalign/angelalign.task.js, tag=时代天使
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.js, tag=NGA刮墙
+
+# id77 https://github.com/id77/QuantumultX/tree/master
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/163GameVip.js, tag=网易游戏
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/thg.js, tag=太好购
+cron "10 12 25,1 * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/10000.js, tag=电信余额提醒
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/geekhub.js, tag=geekhub
+cron "0 12 * * *" script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js, tag=京东物流
+
+# ziye12 https://github.com/ziye12/JavaScript
+cron "13 0/1 * * *" script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/yydkziye.js, tag=音乐打卡
+cron "10 0/1 * * *" script-path=https://raw.githubusercontent.com/ziye12/JavaScript/master/zqdkziye.js, tag=早起打卡
+
+# iisams 
+cron "7 0 * * *" script-path=https://raw.githubusercontent.com/iisams/Scripts/master/liwo/7days.js, tag=梨涡签到领现金
+cron "5 8 * * *" script-path=https://raw.githubusercontent.com/iisams/Scripts/master/liwo/jdtqz.js, tag= 京东特权值
+
+# XidNDD https://github.com/XidNDD/2020scripts
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/yzkbSign.js, tag=柚子快报
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/jddsSign.js, tag=京东读书
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/zymkSign.js, tag=知音漫客
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/hdhycSign.js, tag=海德汇一城
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/mygmcSign.js,tag=民盈国贸城
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/qkylck.js,tag=趣客有礼小程序
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/wsxqSign.js,tag=微商星球
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/XidNDD/2020scripts/master/zscdbSign.js,tag=追书畅读版
+
+# 红鲤鱼与绿鲤鱼与驴   https://github.com/wangdelu2020/hongliyu
+#cron "0 2,13,25,45,55 0-23 * * *" script-path=https://raw.githubusercontent.com/wangdelu2020/hongliyu/master/momosign.js, tag=陌陌
+cron "7 0 * * *" script-path=https://raw.githubusercontent.com/wangdelu2020/hongliyu/master/quwalk2.2.js, tag=趣走签到
+cron "0 0/2 * * * ?" script-path=https://raw.githubusercontent.com/wangdelu2020/hongliyu/master/htt_task_4.js, tag=惠头条
+cron "*/3 0-20/1 * * *" script-path=https://raw.githubusercontent.com/wangdelu2020/hongliyu/master/qktx_task3.js, tag=趣看天下
+cron "28 9 * * *" script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/tls_task.js, tag=特仑苏
+cron "7 0 * * *" script-path=https://raw.githubusercontent.com/wangdelu2020/hongliyu/master/liantongnotice.js, tag=联通流量话费提醒
+cron "0 30 0,6 * * ?" script-path=https://raw.githubusercontent.com/wangdelu2020/hongliyu/master/newsinachaohua.js, tag=新浪微博超话签到
+
+# mw418  https://github.com/mw418/QuantumultX
+cron "5 8 * * *" script-path=https://raw.githubusercontent.com/mw418/QuantumultX/master/setu.js, tag=每日色图
+
+# LJJJia   https://github.com/LJJJia/script
+cron "2 0 * * *" script-path=https://raw.githubusercontent.com/LJJJia/script/master/iklear/iklear_checkin.js, tag=iklear_checkin
+
+# photonmang  https://github.com/photonmang/quantumultX
+cron "10 0 8 * * *" script-path=https://raw.githubusercontent.com/photonmang/quantumultX/master/tuhu/tuhu.js, tag=途虎养车
+
+# yangtingxiao
+#cron "5 9-22 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_bigWinner.js, tag=京东大赢家
+cron "10 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/ttwk/ttwk.js, tag=天天挖矿
+#cron "20 0-20/4 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_timeMachine.js, tag=京东时光机
+cron "5 9 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_starStore.js, tag=京东星店长
+#cron "11 1 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js, tag=京东抽奖机
+
+# elecV2
+cron "0 10 */3 * *" script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/dianx/dianx.js, tag=电信签到
